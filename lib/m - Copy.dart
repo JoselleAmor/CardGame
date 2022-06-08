@@ -60,6 +60,7 @@ class _NinjaCardState extends State<NinjaCard> {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
+
                       Text("Guess the Card",
                           textAlign: TextAlign.center,
                           style: const TextStyle(

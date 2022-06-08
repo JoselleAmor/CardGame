@@ -68,5 +68,15 @@ final List<Carder> Cardlist = [
   Carder(value: 13, urlImage: 'assets/KD.png'),
   Carder(value: 13, urlImage: 'assets/KH.png'),
   Carder(value: 13, urlImage: 'assets/KS.png'),
-
+  Carder(value: 0, urlImage: 'assets/back.png')
 ];
+
+Widget widgetText(){
+  return Text("Guess the Card",
+      textAlign: TextAlign.center,
+      style: const TextStyle(
+        fontSize: 20.0,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ));
+}
