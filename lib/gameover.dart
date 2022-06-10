@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'parts.dart';
-import 'package:audioplayers/audioplayers.dart';
-import 'dart:typed_data';
 
 class gameover extends StatefulWidget {
   const gameover({Key? key}) : super(key: key);

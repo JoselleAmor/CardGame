@@ -1,7 +1,25 @@
+// ADVENTURE CARD GUESS GAME
+// JOSELL AMOR A. QUINAL
+// BSCPE 3B
+//
+// ENGR. CHRISTIAN LLOYD B. SALON
+// INSTRUCTOR
+//
+// PEC 02 COGNATE ELECTIVE SUBJECT
+// LEARNING FLUTTER
+//
+// DISCLAIMER: THE THEME HERE IS FROM ADVENTURE TIME CARTOON NETWORK
+// I DO NOT OWN THESE PHOTOS AND DO NOT CLAIM TO OWN THESE PHOTOS
+
+
+
+
+
+
+
 import 'package:flutter/material.dart';
 import 'pageNavigator.dart';
 import 'parts.dart';
-import 'package:assets_audio_player/assets_audio_player.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,21 +40,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//initialize images
-class GameImages{
-  static const String Ipath = "assets/";
-  static const String back_open = Ipath+"back_open.jpg";
-  static const String back_levelup = Ipath+"back_levelup.jpg";
-  static const String back_gameover = Ipath+"back_gameover.jpg";
-  static const String back_b1 = Ipath+"back_b1.jpg";
-  static const String back_b2 = Ipath+"back_b2.jpg";
-  static const String back_b5 = Ipath+"back_b5.jpg";
-  static const String back_b6 = Ipath+"back_b6.jpg";
-  static const String back_b7 = Ipath+"back_b7.jpg";
-  static const String back_b8 = Ipath+"back_b8.jpg";
-}
-
-
 
 class StartPage extends StatefulWidget {
   @override
@@ -45,17 +48,7 @@ class StartPage extends StatefulWidget {
 
 class _StartPageState extends State<StartPage> {
 
-
-  final _text = TextEditingController();
-  bool _validate = false;
-
-
   @override
-  void dispose() {
-    _text.dispose();
-    super.dispose();
-  }
-
     Widget build(BuildContext context) {
       return SafeArea(
         child: Container(
@@ -70,28 +63,6 @@ class _StartPageState extends State<StartPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-              /* attempt for name
-                  Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: TextField(
-                        controller: _text,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.amber, fontWeight: FontWeight.w600),
-                        maxLength: 15,
-                        maxLines: 1,
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            filled:true,
-                            fillColor: Colors.white.withOpacity(.5),
-                            hintText: "Player Name",
-                            hintStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
-                            errorText: _validate ? 'Enter Name' : null,
-                        ),
-                      ),
-                    ),
-                  ),*/
 
                   Hero(tag: 'uniqueTag',
                       child: ElevatedButton(
@@ -184,7 +155,8 @@ class _StartPageState extends State<StartPage> {
             '\n2. Every score of 5, you move to next level'
             '\n3. -1 life on every wrong guess.'
             '\n4. +2 life on every new level'
-            '\n5. Enjoy!'),
+            '\n5. Ace = 1, King = 13, Queen = 12 Jack = 11.'
+            '\n6. Enjoy!'),
         actions: <Widget>[
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
@@ -194,7 +166,6 @@ class _StartPageState extends State<StartPage> {
       ),
     );
   }
-
 }
 
 

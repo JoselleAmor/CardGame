@@ -4,21 +4,6 @@ import 'parts.dart';
 import 'levelUp.dart';
 
 
-class GameImages {
-  static const String Ipath = "assets/";
-  static const String back_open = Ipath + "back_open.jpg";
-  static const String back_levelup = Ipath + "back_levelup.jpg";
-  static const String back_gameover = Ipath + "back_gameover.jpg";
-  static const String back_b1 = Ipath + "back_b1.jpg";
-  static const String back_b2 = Ipath + "back_b2.jpg";
-  static const String back_b5 = Ipath + "back_b5.jpg";
-  static const String back_b6 = Ipath + "back_b6.jpg";
-  static const String back_b7 = Ipath + "back_b7.jpg";
-  static const String back_b8 = Ipath + "back_b8.jpg";
-}
-
-
-
 
 class GamePage extends StatefulWidget {
   // This is a String for the sake of an example.
@@ -39,27 +24,6 @@ class _GamePageState extends State<GamePage> {
 
   bool _isNextDisabled = true;
   bool _isSolveDisabled = false;
-
-
-  late Image img1;
-  late Image img2;
-  late Image img3;
-  @override
-  void initState() {
-    super.initState();
-    img1 = Image.asset(GameImages.back_b5);
-    img2 = Image.asset(GameImages.back_b1);
-    img3 = Image.asset(GameImages.back_b2);
-
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    precacheImage(img1.image, context);
-    precacheImage(img2.image, context);
-    precacheImage(img3.image, context);
-  }
 
   @override
   void greater() {

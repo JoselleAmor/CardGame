@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:math';
-import 'parts.dart';
-
-
 
 //these are the variables that we need
 Random random = Random();
@@ -16,9 +13,6 @@ String guess = '~'; //show your guess
 bool guessCard = false;
 bool coverCard = true;
 double startopacity = .5;
-
-
-
 
 
 
